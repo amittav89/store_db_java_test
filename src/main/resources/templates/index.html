@@ -1,0 +1,46 @@
+<!-- Define the document type as HTML5 -->
+<!DOCTYPE html>
+<!-- Start the HTML element with the language attribute set to English and add the Thymeleaf namespace -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!-- Begin the head section containing meta information and styles -->
+<head>
+    <!-- Specify the character encoding as UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Set the viewport to be responsive, with a width equal to the device's width and a default scaling of 1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Set the title of the page to "Hello, World!" -->
+    <title>Hello, World!</title>
+    <!-- Add CSS styles inside the style tag -->
+    <style>
+        /* Apply these styles to both the html and body elements */
+        html, body {
+            height: 100%; /* Set their height to 100% of the viewport */
+            margin: 0; /* Remove default margins */
+            font-family: Arial, sans-serif; /* Set the font family to Arial and fall back to sans-serif */
+        }
+
+        /* Apply styles to the container class */
+        .container {
+            display: flex; /* Set the display to flex for alignment and positioning */
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+            height: 100%; /* Set the height of the container to 100% of its parent */
+        }
+
+        /* Apply styles to the h1 element */
+        h1 {
+            font-size: 48px; /* Set the font size to 48 pixels */
+            margin: 0; /* Remove default margins */
+        }
+    </style>
+</head>
+<!-- Begin the body section which contains the content to be displayed -->
+<body>
+<!-- Create a div with the class "container" -->
+<div class="container">
+    <!-- Add an h1 element with the text "Hello, World!" -->
+    <h1>Hello, World!</h1>
+</div>
+</body>
+<!-- Close the HTML element -->
+</html>
