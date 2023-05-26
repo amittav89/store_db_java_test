@@ -27,6 +27,10 @@ public class Products
     @Column(name = "product_stock", nullable = false)
     private int productStock;
 
+    /*relationships - many to one*/
+    @Column(name = "supplier_id", nullable = false)
+    private Long supplierId;
+
     public Products( String productName, double productPrice, int productStock)
     {
         this.productName = productName;
