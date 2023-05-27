@@ -6,7 +6,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import org.hibernate.annotations.Check;
 import lombok.Data;
+import org.hibernate.annotations.DialectOverride;
 
 import java.util.Date;
 
@@ -20,9 +22,11 @@ public class Customers
     private Long customer_id;
 
     @Column(name = "first_name")
+    @Check(constraints = "LENGTH(first_name) >= 5 AND LENGTH(first_name) <= 20")
     private String first_name;
 
     @Column(name = "last_name")
+    @Check(constraints = "LENGTH(last_name) >= 5 AND LENGTH(last_name)<=20")
     private String last_name;
 
     @Column(name = "phone_number")

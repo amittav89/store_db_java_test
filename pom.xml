@@ -49,7 +49,17 @@
 			<artifactId>jaxb-core</artifactId>
 			<version>4.0.2</version>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>constraints</groupId>
+            <artifactId>constraints</artifactId>
+            <version>0.1.10</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>6.1.7.Final</version>
+        </dependency>
+    </dependencies>
 
 	<build>
 		<plugins>
