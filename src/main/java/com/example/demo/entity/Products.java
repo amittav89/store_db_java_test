@@ -1,12 +1,20 @@
 package com.example.demo.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import lombok.Data;
 import org.hibernate.annotations.Check;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @Entity
-
 @Check(constraints = "product_price>0")
 public class Products {
     @Id
@@ -27,6 +35,9 @@ public class Products {
     @Column(name = "supplier_id", nullable = false)
     private Long supplierId;
 
+    @ManyToMany(mappedBy = "products")
+    private Set<Orders> orders = new HashSet<>();
+
     public Products(String productName, double productPrice, int productStock) {
         this.productName = productName;
         this.productPrice = productPrice;
@@ -36,4 +47,6 @@ public class Products {
     public Products() {
 
     }
+
+
 }
