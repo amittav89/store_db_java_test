@@ -15,32 +15,32 @@ public class Customers
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "customer_id", nullable = false)
-    private Long customer_id;
+    @Column(name = "customerID", nullable = false)
+    private Long customerID;
 
-    @Column(name = "first_name")
+    @Column(name = "firstName")
     @Check(constraints = "LENGTH(first_name) >= 5 AND LENGTH(first_name) <= 20")
-    private String first_name;
+    private String firstName;
 
-    @Column(name = "last_name")
+    @Column(name = "lastName")
     @Check(constraints = "LENGTH(last_name) >= 5 AND LENGTH(last_name)<=20")
-    private String last_name;
+    private String lastName;
 
-    @Column(name = "phone_number")
-    private String phone_number;
+    @Column(name = "phoneNumber")
+    private String phoneNumber;
 
-    @Column(name = "birth_date")
-    private String birth_date;
+    @Column(name = "birthDate")
+    private String birthDate;
 
     @Column(name = "city")
     private String city;
 
-    public Customers(String first_name, String last_name, String phone_number, String birth_date, String city)
+    public Customers(String firstName, String lastName, String phoneNumber, String birthDate, String city)
     {
-        this.first_name = first_name;
-        this.last_name = last_name;
-        this.phone_number = phone_number;
-        this.birth_date = birth_date;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+        this.birthDate = birthDate;
         this.city = city;
     }
 

@@ -35,4 +35,11 @@ class CustomersRepositoryTest
             List<Customers> customersList = customerRepository.findAll();
             System.out.println("customers list : " + customersList);
         }
+
+        @Test
+        public void printCustomerByFirstName()
+        {
+            List<Customers> customersList = customerRepository.findByFirstName("Amit");
+            System.out.println("customers list : " + customersList);
+        }
 }
