@@ -8,9 +8,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import org.hibernate.annotations.Check;
 import lombok.Data;
-import org.hibernate.annotations.DialectOverride;
-
-import java.util.Date;
 
 @Data
 @Entity
@@ -33,12 +30,12 @@ public class Customers
     private String phone_number;
 
     @Column(name = "birth_date")
-    private Date birth_date;
+    private String birth_date;
 
     @Column(name = "city")
     private String city;
 
-    public Customers(String first_name, String last_name, String phone_number, Date birth_date,String city)
+    public Customers(String first_name, String last_name, String phone_number, String birth_date, String city)
     {
         this.first_name = first_name;
         this.last_name = last_name;
